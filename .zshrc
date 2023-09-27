@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH="$HOME/bin:$HOME/.local/bin:/usr/lib/ccache:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:/usr/lib/ccache:/bin/python:/bin/python3:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -8,6 +8,9 @@ export ZSH="$HOME/.oh-my-zsh"
 export TOKEN="KczxCfYh"
 export NEMU_HOME=/home/han/ics2023/nemu
 export AM_HOME=/home/han/ics2023/abstract-machine
+
+# set PAGER bash shell variable
+export PAGER="/usr/bin/most -s"
 
 
 # Set name of the theme to load --- if set to "random", it will
@@ -80,9 +83,11 @@ plugins=(
 	git
 	zsh-autosuggestions
 	zsh-syntax-highlighting
+	tmux
 #	history-substring-search
 #	z
 	)
+ZSH_TMUX_AUTOSTART=true
 
 source $ZSH/oh-my-zsh.sh
 
