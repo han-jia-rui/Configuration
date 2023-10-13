@@ -83,6 +83,11 @@ let g:Lf_ShortcutF = '<c-f>'
 
 "  Leaderf 显示隐藏文件
 let g:Lf_ShowHidden = 1
+nnoremap <silent><nowait> <space>f  :<C-u>Leaderf file<cr>
+nnoremap <silent><nowait> <space>g  :<C-u>Leaderf gtags<cr>
+nnoremap <silent><nowait> <space>c  :<C-u>Leaderf command<cr>
+nnoremap <silent><nowait> <space>r  :<C-u>Leaderf rg<cr>
+nnoremap <silent><nowait> <space>h  :<C-u>Leaderf help<cr>
 
 
 "------------------------------------------------------------------------
@@ -126,11 +131,6 @@ if has('nvim')
 else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
-
-" Use `[g` and `]g` to navigate diagnostics
-" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation
 nmap <silent> gd <Plug>(coc-definition)
@@ -232,18 +232,8 @@ command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.org
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions
 nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
-" Show commands
-nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document
 nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
-" Search workspace symbols
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
-" Do default action for next item
-nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
-" Do default action for previous item
-nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
-" Resume latest coc list
-nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
@@ -317,10 +307,10 @@ set cursorline          " 突出显示当前行
 set hlsearch            " 搜索时高亮显示被找到的文本
 set ruler               " 打开状态栏标尺
 "set magic               " 设置魔术
-set foldenable          " 开始折叠
-set foldmethod=syntax   " 设置语法折叠
-set foldcolumn=0        " 设置折叠区域的宽度
-setlocal foldlevel=1    " 设置折叠层数为 1
+"set foldenable          " 开始折叠
+"set foldmethod=syntax   " 设置语法折叠
+"set foldcolumn=0        " 设置折叠区域的宽度
+"setlocal foldlevel=1    " 设置折叠层数为 1
 set noswapfile			" 不生成swp文件
 set undofile			" 保留历史撤销记录
 set backupdir=~/.vim/.backup//  

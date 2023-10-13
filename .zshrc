@@ -6,6 +6,8 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Env for ics2023.
 export TOKEN="KczxCfYh"
+export STUNAME="Han Jia Rui"
+export STUID="221900156"
 export NEMU_HOME=/home/han/ics2023/nemu
 export AM_HOME=/home/han/ics2023/abstract-machine
 
