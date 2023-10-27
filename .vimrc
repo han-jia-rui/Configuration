@@ -216,6 +216,8 @@ xmap <silent> <C-s> <Plug>(coc-range-select)
 " Add `:Format` command to format current buffer
 command! -nargs=0 Format :call CocActionAsync('format')
 
+nnoremap <silent><nowait> <space>p  :<C-u>Format<cr>
+
 " Add `:Fold` command to fold current buffer
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
@@ -289,9 +291,9 @@ set background=dark
 " according to the detected filetype.
 filetype plugin indent on
 
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
@@ -307,10 +309,10 @@ set cursorline          " 突出显示当前行
 set hlsearch            " 搜索时高亮显示被找到的文本
 set ruler               " 打开状态栏标尺
 "set magic               " 设置魔术
-"set foldenable          " 开始折叠
-"set foldmethod=syntax   " 设置语法折叠
-"set foldcolumn=0        " 设置折叠区域的宽度
-"setlocal foldlevel=1    " 设置折叠层数为 1
+set foldenable          " 开始折叠
+set foldmethod=syntax   " 设置语法折叠
+set foldcolumn=0        " 设置折叠区域的宽度
+setlocal foldlevel=1    " 设置折叠层数为 1
 set noswapfile			" 不生成swp文件
 set undofile			" 保留历史撤销记录
 set backupdir=~/.vim/.backup//  

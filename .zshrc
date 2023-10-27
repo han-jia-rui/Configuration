@@ -12,7 +12,7 @@ export NEMU_HOME=/home/han/ics2023/nemu
 export AM_HOME=/home/han/ics2023/abstract-machine
 
 # set PAGER bash shell variable
-export PAGER="/usr/bin/most -s"
+# export PAGER="/usr/bin/less -s"
 
 
 # Set name of the theme to load --- if set to "random", it will
@@ -86,8 +86,9 @@ plugins=(
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 	tmux
+	colored-man-pages
 #	history-substring-search
-#	z
+	z
 	)
 ZSH_TMUX_AUTOSTART=true
 
