@@ -1,19 +1,25 @@
 # If you come from bash you might have to change your $PATH.
-export PATH="$HOME/bin:$HOME/.local/bin:/usr/lib/ccache:/bin/python:/bin/python3:$PATH"
+export PATH="$HOME/App:$HOME/Script:$HOME/Verilog/nvboard/include:$HOME/bin:$HOME/.local/bin:/usr/lib/ccache:/bin/python:/bin/python3:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # Env for ics2023.
 export TOKEN="KczxCfYh"
-export STUNAME="Han Jia Rui"
+export STUNAME="Han Jiarui"
 export STUID="221900156"
-export NEMU_HOME=/home/han/ics2023/nemu
-export AM_HOME=/home/han/ics2023/abstract-machine
+export ISA="riscv32"
+export NEMU_HOME=/home/han/ICS/ics2023/nemu
+export AM_HOME=/home/han/ICS/ics2023/abstract-machine
+export NVBOARD_HOME=/home/han/Verilog/nvboard
+export ARCH="riscv32-nemu"
+export NAVY_HOME=/home/han/ICS/ics2023/navy-apps
+export NANO_HOME=/home/han/ICS/ics2023/nanos-lite
 
 # set PAGER bash shell variable
-# export PAGER="/usr/bin/less -s"
+export PAGER="less -s"
 
+export OBS_VAULT=/home/han/Desktop/hjr/Obsidian
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -90,9 +96,11 @@ plugins=(
 #	history-substring-search
 	z
 	)
-ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOSTART=false
 
 source $ZSH/oh-my-zsh.sh
+if [ -f '/snap/google-cloud-cli/189/completion.zsh.inc' ];
+then source '/snap/google-cloud-cli/189/completion.zsh.inc'; fi
 
 # User configuration
 
@@ -105,8 +113,10 @@ source $ZSH/oh-my-zsh.sh
  if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vim'
  else
-   export EDITOR='mvim'
+   export EDITOR='nvim'
  fi
+
+source /home/han/.config/broot/launcher/bash/br
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -119,3 +129,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vim="nvim"
+alias br="br -i"
+alias py="python3"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
