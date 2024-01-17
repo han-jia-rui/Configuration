@@ -115,5 +115,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-export NEMU_HOME=/home/han/ics2023/nemu
-export AM_HOME=/home/han/ics2023/abstract-machine

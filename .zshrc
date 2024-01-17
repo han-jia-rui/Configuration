@@ -17,7 +17,7 @@ export NAVY_HOME=/home/han/ICS/ics2023/navy-apps
 export NANO_HOME=/home/han/ICS/ics2023/nanos-lite
 
 # set PAGER bash shell variable
-export PAGER="less -s"
+export PAGER="less -s -R"
 
 export OBS_VAULT=/home/han/Desktop/hjr/Obsidian
 
