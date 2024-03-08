@@ -1,20 +1,24 @@
 # If you come from bash you might have to change your $PATH.
-export PATH="$HOME/App:$HOME/Script:$HOME/Verilog/nvboard/include:$HOME/bin:$HOME/.local/bin:/usr/lib/ccache:/bin/python:/bin/python3:$PATH"
+export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$HOME/App:$HOME/hjr/Script:$HOME/bin:$HOME/.local/bin:/usr/lib/ccache:/bin/python:/bin/python3:$PATH"
+export MANPATH="/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH"
+export INFOPATH="/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Env for ics2023.
-export TOKEN="KczxCfYh"
+export HJR=$HOME/hjr
+
+# Env for NJU.
 export STUNAME="Han Jiarui"
 export STUID="221900156"
 export ISA="riscv32"
-export NEMU_HOME=/home/han/ICS/ics2023/nemu
-export AM_HOME=/home/han/ICS/ics2023/abstract-machine
-export NVBOARD_HOME=/home/han/Verilog/nvboard
+export ICS=$HJR/ics2023
+export NEMU_HOME=$ICS/pa/nemu
+export AM_HOME=$ICS/pa/abstract-machine
+export NVBOARD_HOME=$HJR/Verilog/nvboard
 export ARCH="riscv32-nemu"
-export NAVY_HOME=/home/han/ICS/ics2023/navy-apps
-export NANO_HOME=/home/han/ICS/ics2023/nanos-lite
+export NAVY_HOME=$ICS/pa/navy-apps
+export NANO_HOME=$ICS/pa/nanos-lite
 
 # set PAGER bash shell variable
 export PAGER="less -s -R"
@@ -132,6 +136,9 @@ source /home/han/.config/broot/launcher/bash/br
 alias vim="nvim"
 alias br="br -i"
 alias py="python3"
+alias todo="gnome-todo"
+alias zshconf="$EDITOR ~/.zshrc"
+alias zshsrc="source ~/.zshrc"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
